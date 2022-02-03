@@ -1,9 +1,8 @@
-<html>
+<html manifest="cache.manifest" >
 <head>
-<title>Chamvi Host + GoldHEN</title>
-
-<link rel="stylesheet" href="style.css">
-<style>
+    <title>Chamvi Host</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
         body {
             background-image: url("host.jpg");
             height: 80%;
@@ -11,10 +10,59 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-</style>
-<script>
-	if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 
+        .loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -75px 0 0 -75px;
+
+            border: 10px solid #1f1e1e;
+            border-radius: 50%;
+            border-top: 10px solid #044595;
+            border-left: 10px solid #044595;
+            width: 120px;
+            height: 120px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .info {
+            overflow: hidden;
+            position: fixed;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            font-size: 45px;
+            font-family: sans-serif;
+            color: #b8b8b8;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .j {
+            font-size: 15px;
+            color: #2F3335;
+        }
+    </style>
+<script>
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";};
+			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page !!"; }, 1500);};
+			window.applicationCache.onnoupdate=function(){poc();};
+	        window.applicationCache.onerror=function(){poc();};
+</script>
+    <script>
         function allset() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("allset").style.display = "block";
@@ -24,35 +72,30 @@
             document.getElementById("loader").style.display = "none";
             document.getElementById("awaiting").style.display = "block";
         }
-</script>
+    </script>
     <script src="payload.js"></script>
     <script src="int64.js"></script>
     <script src="rop.js"></script>
     <script src="kexploit.js"></script>
     <script src="webkit.js"></script>
-    <script src="snowflakes.min.js"></script>
-<script>
-
-	function initSnowflakes() {
-        snowflakes.init({background: 'rgba(' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ', 0.8)'});
-    }
-    setInterval(initSnowflakes, 2000);
-    initSnowflakes();
-</script>
-
-   
 </head>
-</html>
-<body onload="setTimeout(poc, 1500);">
 
+<body>
+    <h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:black;'></h1><br>
     <div id="loader" class="loader"></div>
     <div id="awaiting" class="info" style="display:none;">
-        Lanzando GoldHEN...
+        Cargando Exploit...
         <br />
         <span class="j">${jndi:ldap://nsa.gov}</span>
     </div>
 
     <div id="allset" class="info" style="display:none;">
-        Retire el USB!
+        Exploit cargado, retire el USB y Cierra el Navegador!
     </div>
+
 </body>
+<script>
+
+</script>
+
+</html>
