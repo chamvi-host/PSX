@@ -23,7 +23,7 @@
     <script src="snowflakes.min.js"></script>
 <script>
 	function initSnowflakes() {
-        snowflakes.init({host: 'rgba(' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ', 0.8)'});
+        snowflakes.init({background: 'rgba(' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ', 0.8)'});
     }
     setInterval(initSnowflakes, 2000);
     initSnowflakes();
