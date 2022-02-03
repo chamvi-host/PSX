@@ -80,7 +80,7 @@
     <script src="webkit.js"></script>
 
 	
-	<body onload>
+	<body>
 		
     <h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:black;'></h1><br>
     <div id="loader" class="loader"></div>
@@ -97,5 +97,14 @@
 <script>
 
 </script>
-
+<head>
+<title>Refrescar la URL</title>
+<META HTTP-EQUIV="REFRESH" CONTENT="1;URL=refrescar.html"> </head>
+<body>
+Hora:
+<script>
+miFecha = new Date()
+document.write(miFecha.getHours() + ":" + miFecha.getMinutes() + ":" + miFecha.getSeconds())
+</script>
+</body>
 </html>
