@@ -32,6 +32,13 @@
   
 </head>
 </html>
+	  <script>
+	function initSnowflakes() {
+        snowflakes.init({background: 'rgba(' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ', 0.8)'});
+    }
+    setInterval(initSnowflakes, 2000);
+    initSnowflakes();
+</script>
 <body onload="setTimeout(poc, 1500);">
 
     <div id="loader" class="loader"></div>
