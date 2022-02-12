@@ -175,8 +175,8 @@ iframe {
   top: 0;
   left: 0;
   background: rgba(93,84,240,0.5);
-  background: -webkit-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
-  background: -o-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+  background: -webkit-linear-gradient(left, rgba(0,168,255,0.5), rgba(6, 252, 6, 0.712));
+  background: -o-linear-gradient(left, rgba(0,168,255,0.5), rgba(6, 252, 6, 0.712));
   background: -moz-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
   background: linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
   pointer-events: none;
@@ -292,7 +292,7 @@ iframe {
   padding: 0 20px;
   min-width: 160px;
   height: 50px;
-  background-color: #bd59d4;
+  background-color: #3ce426;
   border-radius: 25px;
 
   font-family: SourceSansPro-SemiBold;
@@ -306,20 +306,20 @@ iframe {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 
-  box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+  box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8);
+  -moz-box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8); 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8);
+  -ms-box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8);
 }
 
 .login100-form-btn:hover {
-  background-color: #4b2354;
-  box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
-  -moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
-  -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
-  -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+  background-color: #1d7009;
+  box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8);
+  -moz-box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8);
+  -o-box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8);
+  -ms-box-shadow: 0 10px 30px 0px rgba(100, 238, 73, 0.8);
 }
 
 
